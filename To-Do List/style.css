@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", sans-serif;
+}
+body {
+  /* background: url(./assets/img/background.webp) fixed center/cover; */
+  background: linear-gradient(
+    90deg,
+    rgba(32, 32, 159, 0.9838060224089635) 8%,
+    rgba(11, 11, 172, 0.9838060224089635) 48%,
+    rgba(140, 28, 209, 1) 82%
+  );
+  color: #0c0c0c;
+}
+.TodoList {
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+}
+.TodoList-Container {
+  background: #fff;
+  box-shadow: -6px 5px 4px rgba(12, 12, 12, 0.2);
+  border-radius: 50px;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  max-width: 540px;
+}
+.title h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  background: #c2c2c2;
+  border-radius: 30px;
+  position: relative;
+}
+#error-message {
+  color: red;
+  position: absolute;
+  top: -20px;
+  left: 100px;
+}
+#input-box {
+  flex: 1;
+  background: transparent;
+  color: #0c0c0c;
+  border: none;
+  outline: none;
+  font-weight: 14px;
+  padding: 10px;
+  position: relative;
+}
+button {
+  padding: 16px 50px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #1818a8;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.07);
+}
+#task-container li {
+  list-style: none;
+  font-size: 16px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+#task-container li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background: url(./assets/img/unchecked.png) center/cover;
+  top: 12px;
+  left: 8px;
+}
+#task-container li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+#task-container li.checked::before {
+  background: url(./assets/img/checked.png) center/cover;
+}
+#task-container li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+#task-container li span:hover {
+  background: #edeef0;
+}
